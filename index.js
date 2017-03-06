@@ -12,11 +12,11 @@ module.exports = async (request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*')
   }
 
-  if (query.action === 'logs') {
+  if (query.domain === 'logs') {
     send(response, 200, query)
-  } else if (query.action === 'queue') {
+  } else if (query.domain === 'queue') {
     send(response, 200, query)
-  } else if (query.action === 'stats') {
+  } else if (query.domain === 'stats') {
     send(response, 200, query)
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
