@@ -4,6 +4,7 @@ const readFileSync = require('fs').readFileSync
 const marked = require('marked')
 const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
+const handleLogs = require('./lib/handle-logs')
 
 module.exports = async (request, response) => {
   const query = await resolveRequest(request)
@@ -13,7 +14,8 @@ module.exports = async (request, response) => {
   }
 
   if (query.domain === 'logs') {
-    send(response, 200, query)
+    const result = await handleLogs(query)
+    send(response, 200, result)
   } else if (query.domain === 'queue') {
     send(response, 200, query)
   } else if (query.domain === 'stats') {
