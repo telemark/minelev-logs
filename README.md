@@ -9,4 +9,4 @@ logs for minelev
 
 [MIT](LICENSE)
 
-![minelev-logs](https://robots.kebabstudios.party/minelev-logs.png "Robohash image of minelev-logs")
+![Robohash image of minelev-logs](https://robots.kebabstudios.party/minelev-logs.png "Robohash image of minelev-logs")
