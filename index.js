@@ -10,21 +10,24 @@ const handleQueue = require('./lib/handle-queue')
 module.exports = async (request, response) => {
   const query = await resolveRequest(request)
 
-  if (!query.action === 'frontpage') {
-    response.setHeader('Access-Control-Allow-Origin', '*')
-  }
-
-  if (query.domain === 'logs') {
-    const result = await handleLogs(query)
-    send(response, 200, result)
-  } else if (query.domain === 'queue') {
-    const result = await handleQueue(query)
-    send(response, 200, result)
-  } else if (query.domain === 'stats') {
-    send(response, 200, query)
+  if (!query.isValid) {
+    send(response, 401, query)
   } else {
-    const readme = readFileSync('./README.md', 'utf-8')
-    const html = marked(readme)
-    send(response, 200, html)
+    if (!query.action === 'frontpage') {
+      response.setHeader('Access-Control-Allow-Origin', '*')
+    }
+    if (query.domain === 'logs') {
+      const result = await handleLogs(query)
+      send(response, 200, result)
+    } else if (query.domain === 'queue') {
+      const result = await handleQueue(query)
+      send(response, 200, result)
+    } else if (query.domain === 'stats') {
+      send(response, 200, query)
+    } else {
+      const readme = readFileSync('./README.md', 'utf-8')
+      const html = marked(readme)
+      send(response, 200, html)
+    }
   }
 }
