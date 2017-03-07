@@ -11,10 +11,10 @@ const handleStats = require('./lib/handle-stats')
 module.exports = async (request, response) => {
   const query = await resolveRequest(request)
 
-  if (!query.isValid) {
+  if (!query.isValid && query.domain !== 'frontpage') {
     send(response, 401, query)
   } else {
-    if (!query.action === 'frontpage') {
+    if (!query.domain === 'frontpage') {
       response.setHeader('Access-Control-Allow-Origin', '*')
     }
     if (query.domain === 'logs') {
@@ -24,7 +24,8 @@ module.exports = async (request, response) => {
       const result = await handleQueue(query)
       send(response, 200, result)
     } else if (query.domain === 'stats') {
-      send(response, 200, handleStats(query))
+      const result = await handleStats(query)
+      send(response, 200, result)
     } else {
       const readme = readFileSync('./README.md', 'utf-8')
       const html = marked(readme)
