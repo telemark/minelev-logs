@@ -45,6 +45,8 @@ Get stats for schools
 
 Get stats for categories
 
+### Related
+
 ## License
 
 [MIT](LICENSE)
