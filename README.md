@@ -15,7 +15,11 @@ Add a new log
 
 ### ```GET /loqs/{id}```
 
-Get a specific log
+Get a spesific log
+
+### ```POST /logs/search```
+
+Search logs
 
 ### ```POST /loqs/{id}/status```
 
