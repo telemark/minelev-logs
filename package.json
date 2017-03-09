@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.7.1"
+    "node": ">=7.7.2"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -41,7 +41,9 @@
       "logs.minelev.t-fk.win"
     ],
     "env": {
-      "NODE_ENV": "production"
+      "NODE_ENV": "production",
+      "DB": "@minelev-logs-db-connection",
+      "JWT_SECRET": "@minelev-jwt-secret"
     },
     "type": "npm"
   },

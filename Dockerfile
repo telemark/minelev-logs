@@ -1,11 +1,11 @@
 ###########################################################
 #
-# Dockerfile for micro-portalen-roles
+# Dockerfile for minelev-logs
 #
 ###########################################################
 
-# Setting the base to nodejs 7.7.1
-FROM node:7.7.1-alpine
+# Setting the base to nodejs 7.7.2
+FROM node:7.7.2-alpine
 
 # Maintainer
 MAINTAINER Geir Gåsodden
@@ -23,8 +23,6 @@ WORKDIR "/src"
 
 # Install dependencies
 RUN npm install --production
-
-ENV NODE_ENV production
 
 # Expose 3000
 EXPOSE 3000
