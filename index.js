@@ -17,19 +17,24 @@ module.exports = async (request, response) => {
     if (!query.domain === 'frontpage') {
       response.setHeader('Access-Control-Allow-Origin', '*')
     }
-    if (query.domain === 'logs') {
-      const result = await handleLogs(query)
-      send(response, 200, result)
-    } else if (query.domain === 'queue') {
-      const result = await handleQueue(query)
-      send(response, 200, result)
-    } else if (query.domain === 'stats') {
-      const result = await handleStats(query)
-      send(response, 200, result)
-    } else {
-      const readme = readFileSync('./README.md', 'utf-8')
-      const html = marked(readme)
-      send(response, 200, html)
+    try {
+      if (query.domain === 'logs') {
+        const result = await handleLogs(query)
+        send(response, 200, result)
+      } else if (query.domain === 'queue') {
+        const result = await handleQueue(query)
+        send(response, 200, result)
+      } else if (query.domain === 'stats') {
+        const result = await handleStats(query)
+        send(response, 200, result)
+      } else {
+        const readme = readFileSync('./README.md', 'utf-8')
+        const html = marked(readme)
+        send(response, 200, html)
+      }
+    } catch (error) {
+      console.error(error)
+      send(response, 500, error)
     }
   }
 }
