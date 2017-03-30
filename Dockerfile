@@ -1,11 +1,5 @@
-###########################################################
-#
-# Dockerfile for minelev-logs
-#
-###########################################################
-
-# Setting the base to nodejs 7.7.3
-FROM node:7.7.3-alpine
+# Setting the base to nodejs 7.7.4
+FROM node:7.7.4-alpine
 
 # Maintainer
 MAINTAINER Geir Gåsodden
