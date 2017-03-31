@@ -7,6 +7,7 @@ const resolveRequest = require('./lib/resolve-request')
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
 const handleStats = require('./lib/handle-stats')
+const handleClasses = require('./lib/handle-classes')
 
 module.exports = async (request, response) => {
   const query = await resolveRequest(request)
@@ -26,6 +27,9 @@ module.exports = async (request, response) => {
         send(response, 200, result)
       } else if (query.domain === 'stats') {
         const result = await handleStats(query)
+        send(response, 200, result)
+      } else if (query.domain === 'classes') {
+        const result = await handleClasses(query)
         send(response, 200, result)
       } else {
         const readme = readFileSync('./README.md', 'utf-8')

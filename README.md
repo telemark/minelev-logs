@@ -13,7 +13,7 @@ All API calls needs an Authorization header with valid jwt
 
 Add a new log
 
-### ```GET /loqs/{id}```
+### ```GET /loqs/:id```
 
 Get a spesific log
 
@@ -21,7 +21,7 @@ Get a spesific log
 
 Search logs
 
-### ```POST /loqs/{id}/status```
+### ```POST /loqs/:id/status```
 
 Update a logs list of statuses
 
@@ -29,7 +29,7 @@ Update a logs list of statuses
 
 Get next log from queue
 
-### ```DELETE /queue/{id}```
+### ```DELETE /queue/:id```
 
 Deletes log from queue
 
@@ -48,6 +48,10 @@ Get stats for schools
 ### ```GET /stats/categories```
 
 Get stats for categories
+
+### ```GET /classes/:schoolId```
+
+Get all classes for schoolId
 
 ### Related
 
