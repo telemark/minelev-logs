@@ -3,6 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/telemark/minelev-logs.svg)](https://greenkeeper.io/)
 
 # minelev-logs
+
 logs service for minelev
 
 ## API
