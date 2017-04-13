@@ -54,7 +54,7 @@
   "dependencies": {
     "jsonwebtoken": "7.3.0",
     "marked": "0.3.6",
-    "micro": "7.3.1",
+    "micro": "7.3.2",
     "mongojs": "2.4.0",
     "winston": "2.3.1",
     "winston-papertrail": "1.0.4"
