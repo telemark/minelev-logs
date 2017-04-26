@@ -1,0 +1,6 @@
+{
+  "rules": [
+    { "pathname": "/stats/**", "dest": "stats.logs.dev.minelev.no" },
+    { "dest": "main.logs.dev.minelev.no" }
+  ]
+}

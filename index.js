@@ -6,7 +6,6 @@ const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
-const handleStats = require('./lib/handle-stats')
 const handleClasses = require('./lib/handle-classes')
 
 module.exports = async (request, response) => {
@@ -24,9 +23,6 @@ module.exports = async (request, response) => {
         send(response, 200, result)
       } else if (query.domain === 'queue') {
         const result = await handleQueue(query)
-        send(response, 200, result)
-      } else if (query.domain === 'stats') {
-        const result = await handleStats(query)
         send(response, 200, result)
       } else if (query.domain === 'classes') {
         const result = await handleClasses(query)

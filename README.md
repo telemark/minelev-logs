@@ -38,18 +38,6 @@ Deletes log from queue
 
 Get number of logs in queue
 
-### ```GET /stats/total```
-
-Get stats for total of logs
-
-### ```GET /stats/schools```
-
-Get stats for schools
-
-### ```GET /stats/categories```
-
-Get stats for categories
-
 ### ```GET /classes/:schoolId```
 
 Get all classes for schoolId
@@ -60,6 +48,7 @@ Get all classes for schoolId
 - [minelev-buddy](https://github.com/telemark/minelev-buddy) buddy service for MinElev
 - [minelev-notifications](https://github.com/telemark/minelev-notifications) notifications service for MinElev
 - [minelev-leder](https://github.com/telemark/minelev-leder) web frontend for MinElev - school administration
+- [minelev-logs-stats](https://github.com/telemark/minelev-logs-stats) statistics service for MinElev logs
 
 ## License
 
