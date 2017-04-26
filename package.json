@@ -52,7 +52,7 @@
     "test-listen": "1.0.1"
   },
   "dependencies": {
-    "jsonwebtoken": "7.3.0",
+    "jsonwebtoken": "7.4.0",
     "marked": "0.3.6",
     "micro": "7.3.2",
     "mongojs": "2.4.0",
