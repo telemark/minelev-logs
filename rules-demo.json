@@ -1,6 +1,6 @@
 {
   "rules": [
-    { "pathname": "/stats/**", "dest": "stats.logs.demo.minelev.no" },
-    { "dest": "main.logs.demo.minelev.no" }
+    { "pathname": "/stats/**", "dest": "stats.logs.minelev.win" },
+    { "dest": "main.logs.minelev.win" }
   ]
 }
