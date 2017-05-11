@@ -49,6 +49,7 @@ Get all classes for schoolId
 - [minelev-notifications](https://github.com/telemark/minelev-notifications) notifications service for MinElev
 - [minelev-leder](https://github.com/telemark/minelev-leder) web frontend for MinElev - school administration
 - [minelev-logs-stats](https://github.com/telemark/minelev-logs-stats) statistics service for MinElev logs
+- [minelev-dashboard](https://github.com/telemark/minelev-dashboard) dashboard for MinElev
 
 ## License
 
