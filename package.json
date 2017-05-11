@@ -50,7 +50,7 @@
     "nsp": "2.6.3",
     "nyc": "10.3.2",
     "standard": "10.0.2",
-    "test-listen": "1.0.1"
+    "test-listen": "1.0.2"
   },
   "dependencies": {
     "jsonwebtoken": "7.4.0",
