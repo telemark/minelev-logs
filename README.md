@@ -18,6 +18,10 @@ Add a new log
 
 Get a spesific log
 
+### ```DELETE /loqs/:id```
+
+Deletes a spesific log
+
 ### ```POST /logs/search```
 
 Search logs
