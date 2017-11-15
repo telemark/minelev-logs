@@ -1,7 +1,7 @@
 {
   "name": "minelev-logs",
   "description": "logs for MinElev",
-  "version": "2.1.8",
+  "version": "2.1.9",
   "license": "MIT",
   "private": true,
   "author": {
@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=8.9.1"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -21,7 +21,7 @@
     "standard-fix": "standard --fix",
     "dev": "micro-dev",
     "start": "micro",
-    "now-deploy": "npm test && now --npm -E production.env && now alias"
+    "now-deploy": "npm test && now && now alias"
   },
   "keywords": [
     "microservice",
@@ -37,19 +37,23 @@
   "bugs": {
     "url": "https://github.com/telemark/minelev-logs/issues"
   },
-  "homepage": "https://github.com/telemark/minelev-logs",
+  "homepage": "https://github.com/telemark/minelev-logs#readme",
   "now": {
     "alias": [
       "main.logs.minelev.no"
     ],
-    "type": "npm"
+    "type": "npm",
+    "engines": {
+      "node": "8.9.1"
+    },
+    "dotenv": "production.env"
   },
   "devDependencies": {
-    "ava": "0.22.0",
+    "ava": "0.23.0",
     "axios": "0.17.1",
     "coveralls": "3.0.0",
-    "nsp": "3.1.0",
     "micro-dev": "1.4.0",
+    "nsp": "3.1.0",
     "nyc": "11.3.0",
     "standard": "10.0.3",
     "test-listen": "1.0.2"
@@ -58,7 +62,7 @@
     "jsonwebtoken": "8.1.0",
     "markdown-it": "8.4.0",
     "micro": "9.0.1",
-    "mongojs": "2.4.0",
+    "mongojs": "2.4.1",
     "winston": "2.4.0",
     "winston-papertrail": "1.0.5"
   }
