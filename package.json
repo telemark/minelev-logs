@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "jsonwebtoken": "8.1.1",
-    "markdown-it": "8.4.0",
+    "markdown-it": "8.4.1",
     "micro": "9.1.0",
     "mongojs": "2.5.0",
     "winston": "2.4.0",
