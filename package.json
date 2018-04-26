@@ -63,7 +63,7 @@
     "markdown-it": "8.4.1",
     "micro": "9.1.4",
     "mongojs": "2.5.0",
-    "winston": "2.4.1",
+    "winston": "3.0.0-rc3",
     "winston-papertrail": "1.0.5"
   }
 }
