@@ -1,0 +1,11 @@
+{
+  "name": "minelev-logs",
+  "alias": [
+    "main.logs.minelev.no"
+  ],
+  "type": "npm",
+  "engines": {
+    "node": ">=10.7.0"
+  },
+  "dotenv": "production.env"
+}
