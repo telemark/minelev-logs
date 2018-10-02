@@ -57,5 +57,3 @@ Get all classes for schoolId
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of minelev-logs](https://robots.kebabstudios.party/minelev-logs.png "Robohash image of minelev-logs")
