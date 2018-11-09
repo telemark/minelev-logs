@@ -1,5 +1,3 @@
-'use strict'
-
 const readFileSync = require('fs').readFileSync
 const md = require('markdown-it')()
 const { send } = require('micro')
