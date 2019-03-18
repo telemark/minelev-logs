@@ -49,7 +49,7 @@
     "test-listen": "1.1.0"
   },
   "dependencies": {
-    "jsonwebtoken": "8.5.0",
+    "jsonwebtoken": "8.5.1",
     "markdown-it": "8.4.2",
     "micro": "9.3.3",
     "mongojs": "2.6.0",
