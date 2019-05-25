@@ -1,5 +1,3 @@
-const readFileSync = require('fs').readFileSync
-const md = require('markdown-it')()
 const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
 const handleLogs = require('./lib/handle-logs')
@@ -25,9 +23,6 @@ module.exports = async (request, response) => {
       } else if (query.domain === 'classes') {
         const result = await handleClasses(query)
         send(response, 200, result)
-      } else {
-        const readme = readFileSync('./README.md', 'utf-8')
-        send(response, 200, md.render(readme))
       }
     } catch (error) {
       console.error(error)
