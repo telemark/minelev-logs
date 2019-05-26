@@ -48,7 +48,7 @@
   "dependencies": {
     "jsonwebtoken": "8.5.1",
     "micro": "9.3.4",
-    "mongojs": "2.6.0",
+    "mongodb": "3.2.6",
     "winston": "2.4.4",
     "winston-papertrail": "1.0.5"
   }
