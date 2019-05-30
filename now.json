@@ -17,12 +17,12 @@
   },
   "builds": [
     {
-      "src": "/README.md",
-      "use": "@now/md"
-    },
-    {
       "src": "/index.js",
       "use": "@now/node"
+    },
+    {
+      "src": "/README.md",
+      "use": "@now/md"
     }
   ],
   "routes": [
