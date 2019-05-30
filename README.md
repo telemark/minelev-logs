@@ -45,6 +45,40 @@ Get number of logs in queue
 
 Get all classes for schoolId
 
+## Development
+
+You'll need the [now-cli](https://zeit.co/now) installed
+
+- clone the repo
+- install dependencies
+- add a `.env` file
+- start the service with now-dev ```$ now dev```
+
+.env
+
+```
+NODE_ENV=development
+MONGODB_CONNECTION=connection-to-a-mongodb-compatible-api
+MONGODB_COLLECTION=logs
+MONGODB_NAME=minelev
+JWT_SECRET=whatever-you-want
+PAPERTRAIL_HOST=does-not-matter-in-dev-mode
+PAPERTRAIL_PORT=does-not-matter-in-dev-mode
+PAPERTRAIL_HOSTNAME=does-not-matter-in-dev-mode
+```
+
+## Deploy
+
+This service is created to run on the [ZEIT/Now](https://zeit.co/now) serverless infrastructure.
+
+Make sure the settings in [now.json](now.json) matches your environment.
+
+Run the deploy script.
+
+```
+$ npm run deploy
+```
+
 ### Related
 
 - [minelev-web](https://github.com/telemark/minelev-web) web frontend for MinElev
