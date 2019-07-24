@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "name": "minelev-logs-demo",
+  "name": "minelev-logs",
   "scope": "minelev",
   "alias": [
-    "main.logs.minelev.win"
+    "main.logs.minelev.no"
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-tfkcosmostest-connection",
-    "MONGODB_COLLECTION": "minelevdemo",
-    "MONGODB_NAME": "felles",
-    "JWT_SECRET": "Louie Louie, oh no, I got to go Louie Louie, oh no, I got to go",
-    "PAPERTRAIL_HOSTNAME": "minelev-demo",
+    "MONGODB_CONNECTION": "@db-tfkcosmos-connection",
+    "MONGODB_COLLECTION": "@db-collection",
+    "MONGODB_NAME": "@db-name",
+    "JWT_SECRET": "@minelev-jwt-secret",
+    "PAPERTRAIL_HOSTNAME": "minelev",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port"
   },
