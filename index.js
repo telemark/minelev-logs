@@ -1,4 +1,3 @@
-const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
 const handleLogs = require('./lib/handle-logs')
 const handleQueue = require('./lib/handle-queue')
@@ -8,25 +7,24 @@ module.exports = async (request, response) => {
   const query = await resolveRequest(request)
 
   if (!query.isValid && query.domain !== 'frontpage') {
-    send(response, 401, query)
+    response.status(401)
+    response.json(query)
   } else {
-    if (!query.domain === 'frontpage') {
-      response.setHeader('Access-Control-Allow-Origin', '*')
-    }
+    response.setHeader('Access-Control-Allow-Origin', '*')
     try {
+      let result = {}
       if (query.domain === 'logs') {
-        const result = await handleLogs(query)
-        send(response, 200, result)
+        result = await handleLogs(query)
       } else if (query.domain === 'queue') {
-        const result = await handleQueue(query)
-        send(response, 200, result)
+        result = await handleQueue(query)
       } else if (query.domain === 'classes') {
-        const result = await handleClasses(query)
-        send(response, 200, result)
+        result = await handleClasses(query)
       }
+      response.json(result)
     } catch (error) {
       console.error(error)
-      send(response, 500, error)
+      response.status(500)
+      response.send(error)
     }
   }
 }
