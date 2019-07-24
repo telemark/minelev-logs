@@ -46,6 +46,9 @@
       "src": "/classes/(.*)",
       "dest": "/index.js"
     },
+    { "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
     {
       "src": "/(.*)",
       "dest": "/README.html"
