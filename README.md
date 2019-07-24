@@ -79,6 +79,12 @@ Run the deploy script.
 $ npm run deploy
 ```
 
+or to deploy the demo version
+
+```
+$ npm run deploy-demo
+```
+
 ### Related
 
 - [minelev-web](https://github.com/telemark/minelev-web) web frontend for MinElev

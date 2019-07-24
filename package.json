@@ -21,6 +21,7 @@
     "standard-fix": "standard --fix",
     "dev": "now dev",
     "deploy": "npm test && now --target production",
+    "deploy-demo": "npm test && now --local-config now-demo.json --target production",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [

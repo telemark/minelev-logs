@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "name": "minelev-logs-demo",
+  "scope": "minelev",
+  "alias": [
+    "main.logs.minelev.win"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_CONNECTION": "@db-tfkcosmostest-connection",
+    "MONGODB_COLLECTION": "minelevdemo",
+    "MONGODB_NAME": "felles",
+    "JWT_SECRET": "Louie Louie, oh no, I got to go Louie Louie, oh no, I got to go",
+    "PAPERTRAIL_HOSTNAME": "minelev-demo",
+    "PAPERTRAIL_HOST": "@tfk-papertrail-host",
+    "PAPERTRAIL_PORT": "@tfk-papertrail-port"
+  },
+  "builds": [
+    {
+      "src": "/index.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "/README.md",
+      "use": "@now/md"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/logs",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/logs/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/queue",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/queue/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/classes/(.*)",
+      "dest": "/index.js"
+    },
+    { "src": "/favicon.ico",
+      "dest": "/static/favicon.ico"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/README.html"
+    }
+  ]
+}
