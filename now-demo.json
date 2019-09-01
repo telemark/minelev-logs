@@ -8,7 +8,7 @@
   "env": {
     "NODE_ENV": "production",
     "MONGODB_CONNECTION": "@db-cosmos-dev-connection",
-    "MONGODB_COLLECTION": "logs20192020",
+    "MONGODB_COLLECTION": "logs",
     "MONGODB_NAME": "minelev",
     "JWT_SECRET": "Louie Louie, oh no, I got to go Louie Louie, oh no, I got to go",
     "PAPERTRAIL_HOSTNAME": "minelev-demo",
