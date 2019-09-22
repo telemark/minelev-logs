@@ -89,6 +89,7 @@ $ npm run deploy-demo
 
 - [minelev-web](https://github.com/telemark/minelev-web) web frontend for MinElev
 - [minelev-buddy](https://github.com/telemark/minelev-buddy) buddy service for MinElev
+- [minelev-tjommi-api](https://github.com/telemark/minelev-tjommi-api) buddy compatible api for MinElev
 - [minelev-notifications](https://github.com/telemark/minelev-notifications) notifications service for MinElev
 - [minelev-leder](https://github.com/telemark/minelev-leder) web frontend for MinElev - school administration
 - [minelev-logs-stats](https://github.com/telemark/minelev-logs-stats) statistics service for MinElev logs
