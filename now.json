@@ -21,6 +21,10 @@
       "use": "@now/node"
     },
     {
+      "src": "/lib/ping.js",
+      "use": "@now/node"
+    },
+    {
       "src": "/README.md",
       "use": "@now/md"
     }
@@ -45,6 +49,10 @@
     {
       "src": "/classes/(.*)",
       "dest": "/index.js"
+    },
+    {
+      "src": "/ping",
+      "dest": "/lib/ping.js"
     },
     { "src": "/favicon.ico",
       "dest": "/static/favicon.ico"

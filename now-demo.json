@@ -46,7 +46,12 @@
       "src": "/classes/(.*)",
       "dest": "/index.js"
     },
-    { "src": "/favicon.ico",
+    {
+      "src": "/ping",
+      "dest": "/lib/ping.js"
+    },
+    { 
+      "src": "/favicon.ico",
       "dest": "/static/favicon.ico"
     },
     {

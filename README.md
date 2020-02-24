@@ -45,6 +45,10 @@ Get number of logs in queue
 
 Get all classes for schoolId
 
+### ```GET /ping```
+
+Pong!
+
 ## Development
 
 You'll need the [now-cli](https://zeit.co/now) installed
