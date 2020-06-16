@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "name": "minelev-logs",
-  "scope": "minelev",
+  "name": "minelev-logs-test",
+  "scope": "vtfk",
+  "alias": [
+    "logs.minelev.vtfk.dev"
+  ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-cosmos-prod-connection",
-    "MONGODB_COLLECTION": "@db-cosmos-prod-collection-logs-name",
-    "MONGODB_NAME": "@db-cosmos-prod-db-name",
-    "JWT_SECRET": "@logs-service-jwt-secret",
-    "PAPERTRAIL_HOSTNAME": "minelev",
+    "MONGODB_CONNECTION": "@minelev-test-db-connection",
+    "MONGODB_COLLECTION": "@minelev-test-db-collection-logs",
+    "MONGODB_NAME": "@minelev-test-db-name",
+    "JWT_SECRET": "@minelev-test-logs-jwt",
+    "PAPERTRAIL_HOSTNAME": "minelev-test",
     "PAPERTRAIL_HOST": "@tfk-papertrail-host",
     "PAPERTRAIL_PORT": "@tfk-papertrail-port"
   },

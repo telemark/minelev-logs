@@ -20,8 +20,10 @@
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
     "dev": "now dev",
-    "deploy": "npm test && now --prod",
-    "deploy-demo": "npm test && now --local-config now-demo.json --prod",
+    "deploy": "rm -rf .vercel && npm test && now --prod",
+    "deploy:prod": "rm -rf .vercel && npm test && now --local-config now-prod.json --prod --confirm",
+    "deploy:test": "rm -rf .vercel && npm test && now --local-config now-test.json --prod --confirm",
+    "deploy:demo": "rm -rf .vercel && npm test && now --local-config now-demo.json --prod --confirm",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
